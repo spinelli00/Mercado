@@ -1,18 +1,32 @@
-def telalogin(): # Exibe a tela para o usuário fazer login
+import pickle
+import os
+import time
+
+
+
+def telalogin():
     usuario = input("Digite o usuário >> ").strip()
     senha = input("Digite a senha >> ").strip()
     login_digitado = f"{usuario},{senha}"
 
     try:
-        with open('C:\\Users\\patri\\Desktop\\Projeto mercadinho\\loginpermitidos.txt', 'r', encoding='utf-8') as loginspermitidos:
-            logins = loginspermitidos.readlines()
+        with open('C:\\Users\\patri\\Desktop\\Projeto mercadinho\\loginpermitidos.pickle', 'rb') as loginspermitidos:
+            logins = pickle.load(loginspermitidos)
 
         if login_digitado in logins:
-            print("Login permitido! Indo para menu de usuario ... .")
+            print("Login permitido! Indo para menu de usuario ...")
+            time.sleep(1)
             return True
         else:
-            print("Login ou senha incorretos!")
+            print("Login ou senha incorretos, Voltando ao menu principal !")
+            time.sleep(1)
+            os.system('cls')
             return False
+            
     except FileNotFoundError:
-        print("Arquivo de logins não encontrado!")
+        print("Arquivo de logins não encontrado, Voltando ao menu principal !")
+        time.sleep(1)
+        os.system('cls')
         return False
+        
+        

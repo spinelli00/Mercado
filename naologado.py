@@ -7,12 +7,12 @@ def menu_nao_logado():
         escolha = input("Selecione uma opção (1, 2 ou 3) >> ").strip()
 
         if escolha == '1':
-            visualizar_produtos()  # Exibe a lista de produtos
+            visualizar_produtos()  
         elif escolha == '2':
-            adicionar_carrinho()  # Adiciona produtos ao carrinho
+            adicionar_carrinho() 
         elif escolha == '3':
             print("Saindo para o menu principal...")
-            return  # Retorna ao menu principal, quebrando o loop
+            return  
         else:
             print("Opção inválida! Tente novamente.")
 

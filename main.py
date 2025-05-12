@@ -1,21 +1,22 @@
 from logado import menucomlogin
 from naologado import menu_nao_logado
 from login import telalogin
-# Verficar se o usuário deseja fazer login ou não 
 
 def menu_principal():
     while True:
-        print("\nBem-vindo ao Mercadinho!")
-        print("1. Fazer login")
-        print("2. Seguir sem login")
+        print("----------------------------")
+        print("\n| Bem-vindo ao Mercadinho! |")
+        print("\n----------------------------")
+        print("1. Acessar menu de administrador")
+        print("2. Acessar menu de usuário")
         escolha = input("Selecione uma opção (1 ou 2) >> ").strip()
 
         if escolha == '1':
-            if telalogin():  # Chama o login, se for bem-sucedido, entra no menu logado
-                menucomlogin()  # Menu para usuário logado
+            if telalogin():  
+                menucomlogin()  
                 break
         elif escolha == '2':
-            menu_nao_logado()  # Menu para usuário não logado
+            menu_nao_logado() 
             break
         else:
             print("Opção inválida! Tente novamente.")

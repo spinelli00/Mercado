@@ -62,7 +62,7 @@ def listaritens():
 def menucomlogin(): # Exibe o menu de opções para os usuarios que possuem login
     while True:
         try:
-            print("\nMenu:")
+            print("\n| Menu de admnistrador : |")
             print("1. Adicionar itens ao estoque")
             print("2. Remover item do estoque")
             print("3. Listar itens do estoque")
