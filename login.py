@@ -1,6 +1,6 @@
 import pickle
-import os
-import time
+from os import system
+from time import sleep
 
 
 
@@ -15,18 +15,18 @@ def telalogin():
 
         if login_digitado in logins:
             print("Login permitido! Indo para menu de usuario ...")
-            time.sleep(1)
+            sleep(1)
             return True
         else:
             print("Login ou senha incorretos, Voltando ao menu principal !")
-            time.sleep(1)
-            os.system('cls')
+            sleep(1)
+            system('cls')
             return False
             
     except FileNotFoundError:
         print("Arquivo de logins não encontrado, Voltando ao menu principal !")
-        time.sleep(1)
-        os.system('cls')
+        sleep(1)
+        system('cls')
         return False
         
         
