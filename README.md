@@ -1,4 +1,4 @@
-# Mercado
+# PyCommerce
 Sistema de Gerenciamento de Estoque e Carrinho de Compras
 
 Este é um sistema de gerenciamento de mercadinho, desenvolvido em Python. O projeto visa proporcionar uma interface interativa para a gestão de um estoque de produtos e o carrinho de compras de clientes. O sistema possui duas formas de acesso: com login (para usuários administrativos com login predefinido) e sem login (para usuários comuns).
