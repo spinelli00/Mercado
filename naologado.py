@@ -1,6 +1,4 @@
-from os import system
-from time import sleep
-
+from utils import cleardisplay
 def menu_nao_logado():
     while True:
         print("\nMenu - Acesso sem login:")
@@ -31,8 +29,7 @@ def visualizar_produtos():
                 print(produto.strip())
         else:
             print("O estoque está vazio, Voltando ao menu !")
-            sleep(1)
-            system('cls')
+            cleardisplay()
     except FileNotFoundError:
         print("Arquivo de produtos não encontrado!")
 

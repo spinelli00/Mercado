@@ -12,15 +12,16 @@ def menu_principal():
             print("2. Acessar menu de usuário")
             escolha = input("Selecione uma opção (1 ou 2) >> ").strip()
 
-            if escolha == '1':
-                if telalogin():  
-                    menucomlogin()  
+            match escolha:
+                case '1':
+                    if telalogin():  
+                        menucomlogin()  
+                        break
+                case '2':
+                    menu_nao_logado() 
                     break
-            elif escolha == '2':
-                menu_nao_logado() 
-                break
-            else:
-                print("Opção inválida! Tente novamente.")
+                case _:
+                    print("Opção inválida! Tente novamente.")
     except ValueError :
         print("Opção inválida! Tente novamente.")
 
